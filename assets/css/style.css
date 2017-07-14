@@ -1,3 +1,7 @@
 body {
 	background: url("../images/dark-triangles.png"); 
 }
+
+.jumbotron {
+    background-color: lightblue;
+}
