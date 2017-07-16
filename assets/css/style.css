@@ -5,3 +5,7 @@ body {
 .jumbotron {
     background-color: lightblue;
 }
+div#random-number-display {
+	font-weight: bolder;
+	font-size: 78px;
+}
