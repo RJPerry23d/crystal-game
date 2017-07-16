@@ -1,71 +1,135 @@
 //alert("javascript is linked to html");
 //The player will have to guess the answer, the player will guess with numbers instead of letters.
-var crystalOne = 0;
-var crystalTwo = 0;
-var crystalThree = 0;
-var crystalFour = 0;
-var playerScore = 0;
-var secondNumber = "";
+var crystalOne = Math.floor(Math.random() * 12 ) + 1;
+var crystalTwo = Math.floor(Math.random() * 12 ) + 1;
+var crystalThree = Math.floor(Math.random() * 12 ) + 1;
+var crystalFour = Math.floor(Math.random() * 12 ) + 1;
+//var playerScore = 0;
+var counter = 0;
+var wins = 0;
+var losses = 0;
+
+
 
 //The player will be shown a random number at the start of the game. Random number shown at the start of the game should be between 19 - 120.
-function getRandomIntInclusive(min, max) {
-  min = Math.ceil(19);
-  max = Math.floor(120);
-  return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
+var randomNumber = Math.floor(Math.random() * 120) + 19; 
 
-}
-$('#random-number-display').text(getRandomIntInclusive);
-//console.log(getRandomIntInclusive());
+$('#random-number-display').text(randomNumber);
+
 //There will be four crystals displayed as buttons on the page.
 //When the player clicks on a crystal, it will add a specific amount of points to the player's total score.
 //Each crystal should have a random hidden value between 1 - 12.
-var crystalOne = function() {
-	$("#crystal-one").click(function() {
-  	$("#game-score").text(crystalOne);
-  	//secondNumber += $(this).append(crystalOne);
-});
-  	return Math.floor(Math.random() * 12) +1;
-
-}
-console.log(crystalOne());
-
-var crystalTwo = function() {
-	$("#crystal-two").click(function() {
-  	$("#game-score").text(crystalTwo);
-
-});
-  	return Math.floor(Math.random() * 12) +1;
-
-}
-console.log(crystalTwo());
-
-var crystalThree = function() {
-	$("#crystal-three").click(function() {
-  	$("#game-score").text(crystalThree);
-});
-  	return Math.floor(Math.random() * 12) +1;
-
-}
-console.log(crystalThree());
-
-var crystalFour = function() {
-	$("#crystal-four").click(function() {
-  	$("#game-score").text(crystalFour);
-});
-  	return Math.floor(Math.random() * 12) +1;
-
-}
-console.log(crystalFour());
-
-//Your game will hide this amount until the player clicks a crystal.
-
-
 
 //When they do click one, update the player's score counter.
-
-
-
 //The player wins if their total score matches the random number from the beginning of the game.
+//The player loses if their score goes above the random number.
+
+$('#crystal-one').on('click',function(){
+	counter += crystalOne;
+	$('#game-score').html(counter);
+
+	if (counter === randomNumber) {
+      alert("You win!");
+      wins ++;
+      $('#wins').html(wins);
+      
+    }
+
+    else if (counter >= randomNumber) {
+      alert("You lose!!");
+      losses ++;
+      $('#losses').html(losses);
+      
+
+    }
+    
+});
+//console.log(crystalOne);
+
+//When they do click one, update the player's score counter.
+//The player wins if their total score matches the random number from the beginning of the game.
+//The player loses if their score goes above the random number.
+
+$('#crystal-two').on('click',function(){
+	counter += crystalTwo;
+	$('#game-score').html(counter);
+
+	if (counter === randomNumber) {
+      alert("You win!");
+      wins ++;
+      $('#wins').html(wins);
+      
+    }
+
+    else if (counter >= randomNumber) {
+      alert("You lose!!");
+      losses ++;
+      $('#losses').html(losses);
+      
+
+    }
+    
+});
+//console.log(crystalTwo);
+
+//When they do click one, update the player's score counter.
+//The player wins if their total score matches the random number from the beginning of the game.
+//The player loses if their score goes above the random number.
+
+$('#crystal-three').on('click',function(){
+	counter += crystalThree;
+	$('#game-score').html(counter);
+
+	if (counter === randomNumber) {
+      alert("You win!");
+      wins ++;
+      $('#wins').html(wins);
+      
+    }
+
+    else if (counter >= randomNumber) {
+      alert("You lose!!");
+      losses ++;
+      $('#losses').html(losses);
+      
+
+    }
+    
+
+});
+
+//console.log(crystalThree);
+
+//When they do click one, update the player's score counter.
+//The player wins if their total score matches the random number from the beginning of the game.
+//The player loses if their score goes above the random number.
+
+$('#crystal-four').on('click',function(){
+	counter += crystalFour;
+	$('#game-score').html(counter);
+
+	if (counter === randomNumber) {
+      alert("You win!");
+      wins ++;
+      $('#wins').html(wins);
+      
+    }
+
+    else if (counter >= randomNumber) {
+      alert("You lose!!");
+      losses ++;
+      $('#losses').html(losses);
+      
+
+    }
+    
+});
+ 
+//console.log(crystalFour);
+
+
+
+
 
 
 
