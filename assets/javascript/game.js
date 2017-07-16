@@ -13,7 +13,7 @@ var losses = 0;
 
 //The player will be shown a random number at the start of the game. Random number shown at the start of the game should be between 19 - 120.
 var randomNumber = Math.floor(Math.random() * 120) + 19; 
-
+var newRandomNumber = Math.floor(Math.random() * 120) + 19;
 $('#random-number-display').text(randomNumber);
 
 //There will be four crystals displayed as buttons on the page.
@@ -32,16 +32,28 @@ $('#crystal-one').on('click',function(){
       alert("You win!");
       wins ++;
       $('#wins').html(wins);
-      
-    }
 
-    else if (counter >= randomNumber) {
+      counter = 0;
+      randomNumber = newRandomNumber;
+      $('#game-score').html(counter);
+      //var randomNumber = Math.floor(Math.random() * 102) + 19;
+      $('#random-number-display').html(randomNumber);
+            
+    }
+    
+    else if (counter > randomNumber) {
       alert("You lose!!");
       losses ++;
       $('#losses').html(losses);
-      
+      //$('#random-number-display').text(randomNumber);
+      counter = 0;
+      randomNumber = newRandomNumber;
+      $('#game-score').html(counter);
+      //var randomNumber = Math.floor(Math.random() * 102) + 19;
+      $('#random-number-display').html(randomNumber);     
 
     }
+    
     
 });
 //console.log(crystalOne);
@@ -58,14 +70,25 @@ $('#crystal-two').on('click',function(){
       alert("You win!");
       wins ++;
       $('#wins').html(wins);
-      
-    }
 
-    else if (counter >= randomNumber) {
+      counter = 0;
+      randomNumber = newRandomNumber;
+      $('#game-score').html(counter);
+      //var randomNumber = Math.floor(Math.random() * 102) + 19;
+      $('#random-number-display').html(randomNumber);
+            
+    }
+    
+    else if (counter > randomNumber) {
       alert("You lose!!");
       losses ++;
       $('#losses').html(losses);
-      
+      //$('#random-number-display').text(randomNumber);
+      counter = 0;
+      randomNumber = newRandomNumber;
+      $('#game-score').html(counter);
+      //var randomNumber = Math.floor(Math.random() * 102) + 19;
+      $('#random-number-display').html(randomNumber);     
 
     }
     
@@ -84,14 +107,25 @@ $('#crystal-three').on('click',function(){
       alert("You win!");
       wins ++;
       $('#wins').html(wins);
-      
-    }
 
-    else if (counter >= randomNumber) {
+      counter = 0;
+      randomNumber = newRandomNumber;
+      $('#game-score').html(counter);
+      //var randomNumber = Math.floor(Math.random() * 102) + 19;
+      $('#random-number-display').html(randomNumber);
+            
+    }
+    
+    else if (counter > randomNumber) {
       alert("You lose!!");
       losses ++;
       $('#losses').html(losses);
-      
+      //$('#random-number-display').text(randomNumber);
+      counter = 0;
+      randomNumber = newRandomNumber;
+      $('#game-score').html(counter);
+      //var randomNumber = Math.floor(Math.random() * 102) + 19;
+      $('#random-number-display').html(randomNumber);     
 
     }
     
@@ -112,22 +146,54 @@ $('#crystal-four').on('click',function(){
       alert("You win!");
       wins ++;
       $('#wins').html(wins);
-      
-    }
 
-    else if (counter >= randomNumber) {
+      counter = 0;
+      randomNumber = newRandomNumber;
+      $('#game-score').html(counter);
+      //var randomNumber = Math.floor(Math.random() * 102) + 19;
+      $('#random-number-display').html(randomNumber);
+            
+    }
+    
+    else if (counter > randomNumber) {
       alert("You lose!!");
       losses ++;
       $('#losses').html(losses);
-      
+      //$('#random-number-display').text(randomNumber);
+      counter = 0;
+      randomNumber = newRandomNumber;
+      $('#game-score').html(counter);
+      //var randomNumber = Math.floor(Math.random() * 102) + 19;
+      $('#random-number-display').html(randomNumber);     
 
     }
-    
+
 });
  
 //console.log(crystalFour);
 
+// $('#crystal-four').on('click',function(){
+// 	counter += crystalFour;
+// 	$('#game-score').html(counter);
 
+// 	if (counter === randomNumber) {
+//       alert("You win!");
+//       wins ++;
+//       $('#wins').html(wins);
+            
+//     }
+//     $('#random-number-display').text(randomNumber);
+
+//     else if (counter >= randomNumber) {
+//       alert("You lose!!");
+//       losses ++;
+//       $('#losses').html(losses);
+//       //$('#random-number-display').text(randomNumber);
+//       counter = "";      
+
+//     }
+    
+// });
 
 
 
