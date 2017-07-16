@@ -5,6 +5,12 @@ body {
 .jumbotron {
     background-color: lightblue;
 }
+
+p {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
 div#random-number-display {
 	font-weight: bolder;
 	font-size: 78px;
@@ -13,6 +19,16 @@ div#random-number-display {
 div#game-score {
 	font-weight: bolder;
 	font-size: 78px;
+}
+
+span#wins {
+	font-weight: bolder;
+	font-size: 48px;
+}
+
+span#losses {
+	font-weight: bolder;
+	font-size: 48px;
 }
 
 /*  Bootstrap Clearfix */
