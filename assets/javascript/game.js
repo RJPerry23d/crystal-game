@@ -20,9 +20,9 @@ $('#random-number-display').text(getRandomIntInclusive);
 //When the player clicks on a crystal, it will add a specific amount of points to the player's total score.
 //Each crystal should have a random hidden value between 1 - 12.
 var crystalOne = function() {
-	$( "#crystal-one" ).click(function() {
+	$("#crystal-one").click(function() {
   	$("#game-score").text(crystalOne);
-  	secondNumber += $(this).append(crystalOne);
+  	//secondNumber += $(this).append(crystalOne);
 });
   	return Math.floor(Math.random() * 12) +1;
 
@@ -30,8 +30,8 @@ var crystalOne = function() {
 console.log(crystalOne());
 
 var crystalTwo = function() {
-	$( "#crystal-two" ).click(function() {
-  	$("#game-score").text(crystalOne);
+	$("#crystal-two").click(function() {
+  	$("#game-score").text(crystalTwo);
 
 });
   	return Math.floor(Math.random() * 12) +1;
@@ -40,8 +40,8 @@ var crystalTwo = function() {
 console.log(crystalTwo());
 
 var crystalThree = function() {
-	$( "#crystal-three" ).click(function() {
-  	$("#game-score").text(crystalOne);
+	$("#crystal-three").click(function() {
+  	$("#game-score").text(crystalThree);
 });
   	return Math.floor(Math.random() * 12) +1;
 
@@ -49,8 +49,8 @@ var crystalThree = function() {
 console.log(crystalThree());
 
 var crystalFour = function() {
-	$( "#crystal-four" ).click(function() {
-  	$("#game-score").text(crystalOne);
+	$("#crystal-four").click(function() {
+  	$("#game-score").text(crystalFour);
 });
   	return Math.floor(Math.random() * 12) +1;
 
