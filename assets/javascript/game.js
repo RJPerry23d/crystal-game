@@ -4,6 +4,8 @@ var crystalOne = 0;
 var crystalTwo = 0;
 var crystalThree = 0;
 var crystalFour = 0;
+var playerScore = 0;
+var secondNumber = "";
 
 //The player will be shown a random number at the start of the game. Random number shown at the start of the game should be between 19 - 120.
 function getRandomIntInclusive(min, max) {
@@ -18,25 +20,39 @@ $('#random-number-display').text(getRandomIntInclusive);
 //When the player clicks on a crystal, it will add a specific amount of points to the player's total score.
 //Each crystal should have a random hidden value between 1 - 12.
 var crystalOne = function() {
-  return Math.floor(Math.random() * 12) +1;
+	$( "#crystal-one" ).click(function() {
+  	$("#game-score").text(crystalOne);
+  	secondNumber += $(this).append(crystalOne);
+});
+  	return Math.floor(Math.random() * 12) +1;
 
 }
 console.log(crystalOne());
 
 var crystalTwo = function() {
-  return Math.floor(Math.random() * 12) +1;
+	$( "#crystal-two" ).click(function() {
+  	$("#game-score").text(crystalOne);
+
+});
+  	return Math.floor(Math.random() * 12) +1;
 
 }
 console.log(crystalTwo());
 
 var crystalThree = function() {
-  return Math.floor(Math.random() * 12) +1;
+	$( "#crystal-three" ).click(function() {
+  	$("#game-score").text(crystalOne);
+});
+  	return Math.floor(Math.random() * 12) +1;
 
 }
 console.log(crystalThree());
 
 var crystalFour = function() {
-  return Math.floor(Math.random() * 12) +1;
+	$( "#crystal-four" ).click(function() {
+  	$("#game-score").text(crystalOne);
+});
+  	return Math.floor(Math.random() * 12) +1;
 
 }
 console.log(crystalFour());

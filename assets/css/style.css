@@ -9,3 +9,8 @@ div#random-number-display {
 	font-weight: bolder;
 	font-size: 78px;
 }
+
+div#game-score {
+	font-weight: bolder;
+	font-size: 78px;
+}
