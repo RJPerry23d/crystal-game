@@ -27,10 +27,48 @@ function reset() {
       };
 reset();
 
+function guts() {
+	$('#game-score').html(counter);
 
+	if (counter === randomNumber) {
+      alert("You win!");
+      wins ++;
+      $('#wins').html(wins); 
+      reset();                 
+    }
+    
+    else if (counter > randomNumber) {
+      alert("You lose!!");
+      losses ++;
+      $('#losses').html(losses);
+      reset();                   
+
+    }
+
+};
 //There will be four crystals displayed as buttons on the page.
 //When the player clicks on a crystal, it will add a specific amount of points to the player's total score.
 //Each crystal should have a random hidden value between 1 - 12.
+// counter += crystalOne;
+// 	$('#game-score').html(counter);
+
+// 	if (counter === randomNumber) {
+//       alert("You win!");
+//       wins ++;
+//       $('#wins').html(wins); 
+//       reset();        
+      
+            
+//     }
+    
+//     else if (counter > randomNumber) {
+//       alert("You lose!!");
+//       losses ++;
+//       $('#losses').html(losses);
+//       reset();
+                    
+
+//     }
 
 //When they do click one, update the player's score counter.
 //The player wins if their total score matches the random number from the beginning of the game.
@@ -38,27 +76,7 @@ reset();
 
 $('#crystal-one').on('click',function(){
 	counter += crystalOne;
-	$('#game-score').html(counter);
-
-	if (counter === randomNumber) {
-      alert("You win!");
-      wins ++;
-      $('#wins').html(wins); 
-      reset();        
-      
-            
-    }
-    
-    else if (counter > randomNumber) {
-      alert("You lose!!");
-      losses ++;
-      $('#losses').html(losses);
-      reset();
-                    
-
-    }
-    
-    
+	guts();          
 });
 //console.log(crystalOne);
 
@@ -68,24 +86,7 @@ $('#crystal-one').on('click',function(){
 
 $('#crystal-two').on('click',function(){
 	counter += crystalTwo;
-	$('#game-score').html(counter);
-
-	if (counter === randomNumber) {
-      alert("You win!");
-      wins ++;
-      $('#wins').html(wins); 
-      reset();   
-                  
-    }
-    
-    else if (counter > randomNumber) {
-      alert("You lose!!");
-      losses ++;
-      $('#losses').html(losses);
-      reset();           
-
-    }
-    
+	guts();          
 });
 //console.log(crystalTwo);
 
@@ -95,30 +96,7 @@ $('#crystal-two').on('click',function(){
 
 $('#crystal-three').on('click',function(){
 	counter += crystalThree;
-	$('#game-score').html(counter);
-
-	if (counter === randomNumber) {
-      alert("You win!");
-      wins ++;
-      $('#wins').html(wins);
-      reset();
-
-      
-      
-            
-    }
-    
-    else if (counter > randomNumber) {
-      alert("You lose!!");
-      losses ++;
-      $('#losses').html(losses);
-      reset();
-      //$('#random-number-display').text(randomNumber);
-         
-
-    }
-    
-
+	guts();          
 });
 
 //console.log(crystalThree);
@@ -129,26 +107,7 @@ $('#crystal-three').on('click',function(){
 
 $('#crystal-four').on('click',function(){
 	counter += crystalFour;
-	$('#game-score').html(counter);
-
-	if (counter === randomNumber) {
-      alert("You win!");
-      wins ++;
-      $('#wins').html(wins);
-      reset();
-
-       
-    }
-    
-    else if (counter > randomNumber) {
-      alert("You lose!!");
-      losses ++;
-      $('#losses').html(losses);
-      reset();
-                
-      
-    }
-
+	guts();          
 });
  
 
