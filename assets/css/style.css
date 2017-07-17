@@ -3,12 +3,30 @@ body {
 }
 
 .jumbotron {
-    background-color: lightblue;
+    background-color: #ffffff;
+    border: solid;
+    border-color: lightgray;
+}
+
+/*#Masthead {
+	background-color: #ffffff;
+    border: solid;
+    border-color: lightgray;
+    width: 100%;
+}*/
+div#logo img {
+	width: 75%;
 }
 
 p {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bolder;
+}
+
+div#totals {
+    background-color: #ffffff;
+    border: solid;
+    border-color: lightgray;
 }
 
 div#random-number-display {
