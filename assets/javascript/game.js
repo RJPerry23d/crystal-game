@@ -20,7 +20,7 @@ function reset() {
 	crystalTwo = Math.floor(Math.random() * 12 ) + 1;
 	crystalThree = Math.floor(Math.random() * 12 ) + 1;
 	crystalFour = Math.floor(Math.random() * 12 ) + 1;
-	randomNumber = Math.floor(Math.random() * 120) + 19; 
+	randomNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19; 
 	$('#random-number-display').text(randomNumber); 
 	counter = 0; 
 	$('#game-score').text(counter);
