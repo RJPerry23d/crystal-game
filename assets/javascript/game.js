@@ -1,5 +1,7 @@
 //alert("javascript is linked to html");
 //The player will have to guess the answer, the player will guess with numbers instead of letters.
+
+
 var crystalOne = 0;
 var crystalTwo = 0;
 var crystalThree = 0;
@@ -12,15 +14,17 @@ var randomNumber = 0;
 
 
 //The player will be shown a random number at the start of the game. Random number shown at the start of the game should be between 19 - 120.
-//var randomNumber = Math.floor(Math.random() * 120) + 19; 
-//var newRandomNumber = Math.floor(Math.random() * 120) + 19;
-//$('#random-number-display').text(randomNumber);
+
+var audioClick = new Audio("assets/sounds/Clicking-sound-effect.mp3");
+var audioWin = new Audio("assets/sounds/Ta-da-sound.mp3");
+var audioLose = new Audio("assets/sounds/You-lose-sound-effect.mp3");
+
 function reset() {
 	crystalOne = Math.floor(Math.random() * 12 ) + 1;
 	crystalTwo = Math.floor(Math.random() * 12 ) + 1;
 	crystalThree = Math.floor(Math.random() * 12 ) + 1;
 	crystalFour = Math.floor(Math.random() * 12 ) + 1;
-	randomNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19; 
+	randomNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
 	$('#random-number-display').text(randomNumber); 
 	counter = 0; 
 	$('#game-score').text(counter);
@@ -31,17 +35,19 @@ function guts() {
 	$('#game-score').html(counter);
 
 	if (counter === randomNumber) {
-      alert("You win!");
-      wins ++;
-      $('#wins').html(wins); 
-      reset();                 
+		audioWin.play();
+		alert("You win!");
+		wins ++;
+		$('#wins').html(wins);
+		reset();                 
     }
     
     else if (counter > randomNumber) {
-      alert("You lose!!");
-      losses ++;
-      $('#losses').html(losses);
-      reset();                   
+    	audioLose.play();
+    	alert("You lose!!");
+      	losses ++;
+      	$('#losses').html(losses);
+      	reset();                   
 
     }
 
@@ -49,63 +55,46 @@ function guts() {
 //There will be four crystals displayed as buttons on the page.
 //When the player clicks on a crystal, it will add a specific amount of points to the player's total score.
 //Each crystal should have a random hidden value between 1 - 12.
-// counter += crystalOne;
-// 	$('#game-score').html(counter);
-
-// 	if (counter === randomNumber) {
-//       alert("You win!");
-//       wins ++;
-//       $('#wins').html(wins); 
-//       reset();        
-      
-            
-//     }
-    
-//     else if (counter > randomNumber) {
-//       alert("You lose!!");
-//       losses ++;
-//       $('#losses').html(losses);
-//       reset();
-                    
-
-//     }
 
 //When they do click one, update the player's score counter.
 //The player wins if their total score matches the random number from the beginning of the game.
 //The player loses if their score goes above the random number.
 
 $('#crystal-one').on('click',function(){
+	audioClick.play();
 	counter += crystalOne;
 	guts();          
 });
-//console.log(crystalOne);
 
 //When they do click one, update the player's score counter.
 //The player wins if their total score matches the random number from the beginning of the game.
 //The player loses if their score goes above the random number.
 
 $('#crystal-two').on('click',function(){
+	audioClick.play();
 	counter += crystalTwo;
 	guts();          
 });
-//console.log(crystalTwo);
+
 
 //When they do click one, update the player's score counter.
 //The player wins if their total score matches the random number from the beginning of the game.
 //The player loses if their score goes above the random number.
 
 $('#crystal-three').on('click',function(){
+	audioClick.play();
 	counter += crystalThree;
 	guts();          
 });
 
-//console.log(crystalThree);
+
 
 //When they do click one, update the player's score counter.
 //The player wins if their total score matches the random number from the beginning of the game.
 //The player loses if their score goes above the random number.
 
 $('#crystal-four').on('click',function(){
+	audioClick.play();
 	counter += crystalFour;
 	guts();          
 });
@@ -116,21 +105,7 @@ $('#crystal-four').on('click',function(){
 
 
 
-//The player loses if their score goes above the random number.
 
-
-
-//The game restarts whenever the player wins or loses.
-
-
-
-//When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, 
-
-
-//the user's score (and score counter) will reset to zero.
-
-
-//The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game.
 
 
 
