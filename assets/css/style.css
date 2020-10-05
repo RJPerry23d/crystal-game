@@ -26,21 +26,22 @@ div#logo img {
 }
 
 p {
-  font-size: 16px;
+  font-size: 10px;
   font-weight: bolder;
 }
 
 .instructions {
   color: #ffffff;
-  margin-top: 5vh;
+  margin-top: 2vh;
 }
 
 .scoreboard {
-  margin-top: 5vh;
+  margin-top: 2vh;
 }
 
 .crystals {
-  margin-top: 5vh;
+  margin-top: 3vh;
+  color: #fff;
 }
 
 div#totals {
