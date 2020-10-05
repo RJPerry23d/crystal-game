@@ -44,6 +44,10 @@ p {
   color: #fff;
 }
 
+img {
+  width: 50%;
+}
+
 div#totals {
   background-color: #fff;
   border: rgb(71, 106, 196) solid 15px;
@@ -54,12 +58,12 @@ div#totals {
 
 div#random-number-display {
   font-weight: bolder;
-  font-size: 48px;
+  font-size: 40px;
 }
 
 div#game-score {
   font-weight: bolder;
-  font-size: 48px;
+  font-size: 40px;
 }
 
 span#wins {
